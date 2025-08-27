@@ -38,11 +38,15 @@ getElement('product-box').addEventListener('click',function(e){
         const currentQuantity = Number(quantity) + 1
 
         getElement('total-quantity').innerText = currentQuantity;
-    })
     }
-    
-})
 
+})
+document.getElementById('clear-cart').addEventListener('click',function(){
+        const cartContainer = getElement('cart-container');
+      cartContainer.innerHTML = "";
+      getElement('total-quantity').innerText = 0;
+      getElement('total-price').innerText = 0;
+})
 
 //-----------------------traverse technique----------------------------------
 
